@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: videojobot-telegram
+    runtime: python
+    repo: https://github.com/videojobot/videojobot-telegram
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    autoDeployTrigger: commit
+
+version: "1"
